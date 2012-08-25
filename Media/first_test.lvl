@@ -1,0 +1,142 @@
+../Media/cloudmap-LOAD.cmp
+../Media/cloud-atlas-test.bmp
+../Media/clearSkyAlpha.bmp
+9000
+
+../Media/triplehorn.bmp
+../Media/triplehorn_normal.bmp
+6
+6
+3000
+0 0 0
+
+3
+	../Media/65_65_peak.hmp
+	../Media/black_outline_blend.bmp
+	../Media/GrassSnow.bmp
+	../Media/snow.jpg
+	../Media/stone_cliff_snow.jpg
+	../Media/black2x2.bmp	
+	20
+	20
+	10
+	0 500 0
+	../Media/black2x2.bmp
+	150.00
+	483.00
+	6000.00
+	90.00
+	20
+	10
+	10
+	498
+	1000
+	../Media/65_65_slope_left.hmp
+	../Media/black_outline_blend.bmp	
+	../Media/dirt.jpg
+	../Media/stone_cliff.jpg
+	../Media/GrassSample.png	
+	../Media/black2x2.bmp	
+	20
+	15
+	10
+	1200 -1000 0
+	../Media/black2x2.bmp
+	150.00
+	483.00
+	6000.00
+	90.00
+	20
+	10
+	10
+	498
+	1000
+	../Media/65_65_slope_right.hmp
+	../Media/black_outline_blend.bmp
+	../Media/GrassSample.png
+	../Media/stone_cliff.jpg
+	../Media/dirt.jpg
+	../Media/black2x2.bmp	
+	20
+	15
+	10
+	-1200 -1000 0
+	../Media/black2x2.bmp
+	150.00
+	483.00
+	6000.00
+	90.00
+	20
+	10
+	10
+	498
+	1000	
+    
+    default			229 130 65 0						1 8 7 0.6	
+    black_morph		-255 -255 -255 0					5 7 6 0.5
+    white_morph		255 255 255 0						5 7 6 0.5
+    blue_morph		0 0 255 0							5 7 6 0.5
+    
+    black_sky		-255 -255 -255 0					5 1 1 0.5
+    white_sky		255 255 255 0						5 1 1 0.5
+    
+    black_edge		-255 -255 -255 0					2 128 1 0.5
+    white_edge		255 255 255 0						2 128 1 0.5
+	
+# <- marks end sun state input
+
+<cloudmap filename>
+<cloudatlas tex filename>
+<skytone tex filename>
+<sky radius>
+
+<# of bubbles>	.. for i -> nBubbles
+	<bubble texture filename>
+	<bubble normalmap filename>
+	<bubble horizontal tex tile>
+	<bubble vertical tex tile>
+	<bubble radius>
+	<bubble center coordinates ( x y z eg: 10 10 10)> 
+
+<# if islands> .. for i -> nIslands
+	<heightmap filename>
+	<blendmap filename>
+	<red texture filename>
+	<green texture filename>
+	<blue texture filename>
+	<alpha texture filename>	
+	<ground texture tiling (normally 40)>
+	<cell spacing>
+	<heightspacing>
+	<island bottom left start coordinates ( x y z eg: 10 10 10)> 
+	<pillar texture filename>
+	<pillar cylinder radius (pillar thickness)>
+	<pillar spline radius (adjusts curvature of spline)>
+	<pillar cylinder length>
+	<pillar spline angle (angle subtended by spline)>
+	<pillar num slices (number of slices in cylinder)>
+	<pillar num stacks (number of stacks in cylinder)>
+	<pillar spline stacks (number of stacks in spline)>
+	<pillar spline height>
+	<pillar texture wrap length (height at which the texture should start to repeat itself)>
+	
+	<name> = <color.r color.g color.b color.a>				<morphtime> <vspower> <pspower> <vsmult>
+	
+# marks end of sunstates
+	
+	
+	
+	<name> = <color.r color.g color.b color.a>				<morphtime> <vspower> <pspower> <vsmult>
+
+//! Holds the information needed to morph sun into a new state. Last state is the permanent state until next morph.
+struct SSunMorphState 
+{
+    D3DXVECTOR4 color; // final color
+    float fMorphTime; //! speed of morph. Independent to speed of Clock.
+    float vspower, pspower, vsmult; // shader vars for sun size/look.
+
+    SSunMorphState(const D3DXVECTOR4& _color, float _fMorphTime, float _vspower, float _pspower, float _vsmult) :
+        color(_color), fMorphTime(_fMorphTime), vspower(_vspower), pspower(_pspower), vsmult(_vsmult)    
+    {}
+    SSunMorphState() {}
+};

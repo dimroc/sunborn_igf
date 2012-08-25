@@ -1,0 +1,46 @@
+80
+1
+SunBornMaster 1 1 1 sunb0rnstud sunb0rnstud sunb0rnstud 0 1 0 0 1
+4
+NAME 1
+PORT 0
+MAXPLAYERS 0
+VERSION 0
+
+
+# /// Adds a new table
+# /// It is valid to read and write to the returned pointer.
+# /// \param[in] tableName Name of the new table to create.  Remote systems will refer to this table by this name.
+# /// \param[in] allowRemoteQuery true to allow remote systems to query the table. false to not allow this.
+# /// \param[in] allowRemoteUpdate true to allow remote systems to update rows in the table. false to not allow this.
+# /// \param[in] allowRemoteRemove true to allow remote systems to remove rows from the table. false to not allow this.
+# /// \param[in] queryPassword The password required to query the table.  Pass an empty string for no password.
+# /// \param[in] updatePassword The password required to update rows in the table.  Pass an empty string for no password.
+# /// \param[in] removePassword The password required to remove rows from the table.  Pass an empty string for no password.
+# /// \param[in] oneRowPerSystemId Only used if allowRemoteUpdate==true.  This limits remote systems to one row.
+# /// \param[in] onlyUpdateOwnRows Only used if allowRemoteUpdate==true.  This limits remote systems to only updating rows they created.
+# /// \param[in] removeRowOnPingFailure Only used if allowRemoteUpdate==true and removeRowOnDisconnect==false. If true, this will periodically ping disconnected systems and remove rows created by that system if that system does not respond to pings.
+# /// \param[in] removeRowOnDisconnect Only used if allowRemoteUpdate==true. This removes rows created by a system when that system disconnects.
+# /// \param[in] autogenerateRowIDs true to automatically generate row IDs.  Rows are stored in order by row ID.  If false, the clients must specify a unique row ID when adding rows. If they specify a row that already exists the addition is ignored.
+# /// \return The newly created table, or 0 on failure.
+# DataStructures::Table* AddTable(char *tableName,
+# 	bool allowRemoteQuery,
+#	bool allowRemoteUpdate,
+#	bool allowRemoteRemove,
+#	char queryPassword[_SIMPLE_DATABASE_PASSWORD_LENGTH],
+#	char updatePassword[_SIMPLE_DATABASE_PASSWORD_LENGTH],		
+#	char removePassword[_SIMPLE_DATABASE_PASSWORD_LENGTH],
+#	bool oneRowPerSystemId,
+#	bool onlyUpdateOwnRows,
+#	bool removeRowOnPingFailure,
+#	bool removeRowOnDisconnect,
+#	bool autogenerateRowIDs);
+#
+# fin >> nCols
+#
+# /// \brief Adds a column to the table
+# /// \param[in] columnName The name of the column
+# /// \param[in] columnType What type of data this column will hold. 0 - NUMERIC | 1 - STRING | 2 - BINARY
+# /// \return The index of the new column
+# unsigned AddColumn(char columnName[_TABLE_MAX_COLUMN_NAME_LENGTH], ColumnType columnType);
+

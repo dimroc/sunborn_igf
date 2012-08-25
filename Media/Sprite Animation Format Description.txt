@@ -1,0 +1,44 @@
+<n textures>
+<texture filename> <n rows> <n cols>
+...
+..
+.
+<till n>
+
+<m animations>
+<name of anim> <idx to above tex> 
+	<# of stills> <still #> <still #> <still #> ... <till n stills>	// EACH STILL STARTS FROM LEFT TO RIGHT TOP DOWN. 0 BEING FIRST.
+	<speed> // 1.f = 1 second.
+..
+.
+<till m animations>
+
+eg:
+
+1
+lightning.jpg 1 4
+1
+lightning_blast 0 
+	4 0 1 2 3
+	1.0
+	
+or
+1
+smash.jpg 2 2
+2
+super_smash 0 
+	4 0 1 2 3
+	0.5
+mini_smash 0
+	2 1 2	 	// only uses 2 of the textures stills.
+	1.5
+
+
+//! Adds a texture to be managed by the Animation Manager. 
+//! With the number of stills in each row and column passed.
+//! RETURNS: texture index
+int AddTexture(LPCWSTR texFileName, int nRows = 1, int nCols = 1);
+
+//! Adds an animation sequence that refers to an added texture
+//! RETURNS: the animations index
+int AddAnimation(int idxTex, const vector<int> &vStillIndices, float speed = 0.f, CSound *pSound = NULL);

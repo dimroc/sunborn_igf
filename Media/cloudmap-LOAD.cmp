@@ -1,0 +1,46 @@
+1
+18
+2 450 1750 600 30 80 100 100 100
+2 65 1750 165 30 70 20 10 200
+2 -765 1600 800 30 60 100 10 30
+2 -1300 900 -600 30 70 20 10 140
+3 1200 1000 200 30 70 20 10 80
+2 165 750 -565 30 60 20 10 100
+3 -1250 1000 400 30 70 200 10 80
+3 800 1000 -1200 30 60 80 10 80
+3 1500 1000 -1400 30 60 40 200 80
+
+3 -715 535 300 30 70 100 10 30
+3 -200 1000 1500 30 70 80 200 20
+3 800 1000 1200 30 70 20 10 80
+3 1800 -300 0 30 80 40 20 100
+1 -565 750 -465 30 70 50 10 100
+2 -365 1600 -300 30 70 100 10 100
+1 715 1200 -215 30 80 40 10 100
+3 1850 440 762 30 70 100 20 40
+1 -175 350 570 30 80 40 20 100
+
+
+static const UINT CT_NIMBOSTRATUS           =   1;  //dark low level clouds bringing rain
+static const UINT CT_STRATOCUMULUS          =   2;  //low, lumpy layer of clouds that is sometimes accompanied by weak intensity precipitation
+static const UINT CT_FAIRCUMULUS            =   3;  // Fair weather cumulus. floating cotton
+static const UINT CT_CUMULUSNIMBUS          =   4;  //more vertically developed than fair weather cumulus. They can exist as individual towers
+static const UINT CT_ALTOCUMULUS            =   5;  // field of parallel cotton balls    
+static const UINT CT_CIRRUS                 =   6;  // super high level clouds, thin and wispy
+
+<# of Cloud Batches>
+<# of clouds in batch>
+<Cloudtype> <pos.x> <pos.y> <pos.z> <# of subclouds> <subcloud scale> <widthhalf> <heighthalf> <depthhalf>
+<Cloudtype> <pos.x> <pos.y> <pos.z> <# of subclouds> <subcloud scale> <widthhalf> <heighthalf> <depthhalf>
+.
+.
+for n clouds in batch
+<# of clouds in batch>
+<Cloudtype> <pos.x> <pos.y> <pos.z> <# of subclouds> <subcloud scale> <widthhalf> <heighthalf> <depthhalf>
+<Cloudtype> <pos.x> <pos.y> <pos.z> <# of subclouds> <subcloud scale> <widthhalf> <heighthalf> <depthhalf>
+.
+.
+for n clouds in batch
+.
+.
+for n batches

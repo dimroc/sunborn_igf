@@ -1,0 +1,102 @@
+extension: .lvl
+
+<cloudmap filename>
+<cloudatlas tex filename>
+<skytone tex filename>
+
+<# of bubbles>	.. for i -> nBubbles
+	<bubble texture filename>
+	<bubble normalmap filename>
+	<bubble horizontal tex tile>
+	<bubble vertical tex tile>
+	<bubble radius>
+	<bubble center coordinates ( x y z eg: 10 10 10)> 
+
+<# if islands> .. for i -> nIslands
+	<heightmap filename>
+	<blendmap filename>
+	<red texture filename>
+	<green texture filename>
+	<blue texture filename>
+	<alpha texture filename>
+	<ground texture tiling (normally 40)>
+	<cell spacing>
+	<heightspacing>
+	<island bottom left start coordinates ( x y z eg: 10 10 10)> 
+
+
+
+
+------------------------------------------------
+below is the old code as sample to look from.
+
+/*
+    //! Struct to hold Bubble filename/constructor info from level/world file.
+    struct SBubbleInfo {
+        string strTex, strNormalMap;
+        D3DXVECTOR3 vCenter; 
+        float fRadius;
+        float fHorTile, fVerTile;
+    };
+
+    //! Struct to hold CloudSky filename/constructor info from level/world file.
+    struct SCloudSkyInfo {
+        string strSkyToneTex;
+        string strCloudAtlasTex;
+        string strCloudMap;
+    };
+    */
+    
+    // Load CloudSkyInfo
+    fin >> m_CloudSkyInfo.strCloudMap >> m_CloudSkyInfo.strCloudAtlasTex >> m_CloudSkyInfo.strSkyToneTex;
+
+    // Load BubbleInfo
+    int nLength = 0;
+    fin >> nLength;
+    for(int i=0;i<nLength;++i) {
+        SBubbleInfo bi;
+        fin >> bi.strTex 
+            >> bi.strNormalMap 
+            >> bi.fHorTile
+            >> bi.fVerTile
+            >> bi.fRadius 
+            >> bi.vCenter.x 
+            >> bi.vCenter.y 
+            >> bi.vCenter.z;
+        m_vBubbleInfo.push_back(bi);
+    }
+    if(nLength < 0)
+        return EXIT_FAILURE;
+
+    // Load IslandInfo
+
+    /*
+    //! Struct to hold Island filename/constructor info from level/world file.    
+    struct SQuadTreeInfo {
+        string strHMP;
+        string strBlendMap;
+        string strRedTexture, strGreenTexture, strBlueTexture, strAlphaTexture;
+
+        int nCellSpacing, nHeightSpacing;
+        float fTextureTile;
+        D3DXVECTOR3 vTranslation;
+    };
+    */
+    nLength = 0;
+    fin >> nLength;
+    for(int i=0;i<nLength;++i) {
+        SQuadTreeInfo island;
+        fin >> island.strHMP 
+            >> island.strBlendMap 
+            >> island.strRedTexture
+            >> island.strGreenTexture
+            >> island.strBlueTexture
+            >> island.strAlphaTexture
+            >> island.fTextureTile
+            >> island.nCellSpacing
+            >> island.nHeightSpacing
+            >> island.vTranslation.x
+            >> island.vTranslation.y
+            >> island.vTranslation.z;
+        m_vIslandInfo.push_back(island);
+    }

@@ -1,0 +1,46 @@
+extension: .lcl
+
+<n characters> // playable characters
+	<m animations>
+	<X MESH FILE W/ HEIRARCHY> ( NOT INCLUDED IN ANIMATION COUNT )
+	<1st anim>
+	<2nd anim>
+	.
+	.
+	<mth anim>
+	
+	<m animations>
+	<X MESH FILE W/ HEIRARCHY> ( NOT INCLUDED IN ANIMATION COUNT )
+	<1st anim>
+	<2nd anim>
+	.
+	.
+	<mth anim>
+	
+	<m animations>
+	<MESH FILE> ( NOT INCLUDED IN ANIMATION COUNT )
+	<1st anim>
+	<2nd anim>
+	.
+	.
+	<mth anim>
+	
+	<FOR n CHARACTERS>
+
+	
+//////////////////////////////////// ACTUAL CODE SNIPPET ////////////////////////
+int nChars, nAnims;
+    string str;
+    fin >> nChars;
+    for(int i=0;i<nChars && fin.good(); i++)
+    {
+        fin >> nAnims;        
+        fin >> str; // get mesh file.
+        CXModelHeirarchy* pm = new CXModelHeirarchy(pd3dDevice, str.c_str(), true);
+        for(int j=0;j<nAnims && fin.good();j++)
+        {   // get animations
+            fin >> str;
+            pm->AddAnimation(pd3dDevice, str.c_str());
+        }
+        m_vpCharacterModels.push_back(pm);
+    }

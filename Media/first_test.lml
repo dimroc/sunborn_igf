@@ -1,0 +1,37 @@
+2
+xfiles/plane.x
+xfiles/cube.x
+3
+0 30 1 30 0 0 0 0 1500 0
+0 20 1 80 0 0 0 1500 900 400
+0 20 1 80 0 0 0 -1500 900 400
+
+
+<# geometries>
+<Static (no heirarchy) X File Filename> // position of filename determines geomID (this being 0)
+.
+.
+.	// for n geometries.
+
+<# instances>
+<geomID> <scale.x> <scale.y> <scale.z> <angle.x> <angle.y> <angle.z> <pos.x> <pos.y> <pos.z>
+.
+.
+.
+till i-># instances.
+
+
+11
+0 1 1 1 0 0 0 0 1000 -400
+0 1 1 1 0 0 0 0 1000 -300
+0 1 1 1 0 0 0 0 1000 -200
+0 1 1 1 0 0 0 0 1000 -100
+0 1 1 1 0 0 0 0 1000 0
+
+0 5 1 1 0 0 0 0 1000 100
+0 1 5 1 0 0 0 0 1000 200
+0 1 1 5 0 0 0 0 1000 300
+0 10 1 1 0 0 0 0 1000 400
+0 1 10 1 0 0 0 0 1000 500
+
+0 10 10 10 0 0 0 20 1200 -400

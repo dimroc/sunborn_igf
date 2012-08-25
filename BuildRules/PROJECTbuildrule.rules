@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VisualStudioToolFile
+	Name="PROJECT Rule File"
+	Version="8.00"
+	>
+	<Rules>
+		<CustomBuildRule
+			Name="FX Build Rule"
+			DisplayName="FX Build Rule"
+			CommandLine="fxc.exe /T fx_2_0 /Fc Effects/$(InputName).txt &quot;Effects/$(InputName).fx&quot;"
+			Outputs="$(InputName).fxo"
+			FileExtensions="*.fx"
+			>
+			<Properties>
+			</Properties>
+		</CustomBuildRule>
+	</Rules>
+</VisualStudioToolFile>

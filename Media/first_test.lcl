@@ -1,0 +1,84 @@
+1
+xfiles/mesh_5k.x
+xfiles/animtest_5k.x
+27
+idle=xfiles/idle.x
+idle_midair=xfiles/idle_midair.x
+run=xfiles/run.x
+
+jump=xfiles/jump.x
+jump_double=xfiles/doublejump.x
+
+dive_start=xfiles/dive_start.x
+dive_mid=xfiles/dive_mid.x
+dive_end=xfiles/dive_end.x
+
+fall_start=xfiles/fall_start.x
+fall_mid=xfiles/fall_mid.x
+fall_end=xfiles/fall_end.x
+
+hit_start=xfiles/hit_start.x
+hit_mid=xfiles/hit_mid.x
+hit_end=xfiles/hit_end.x
+
+fireball_start=xfiles/fireball_start.x
+fireball_mid=xfiles/fireball_mid.x
+fireball_end=xfiles/fireball_end.x
+
+lightning_start=xfiles/light_start.x
+lightning_mid=xfiles/light_mid.x
+lightning_end=xfiles/light_end.x
+
+attack_start=xfiles/swordkick.x
+attack_mid=xfiles/swordkick.x
+attack_end=xfiles/swordkick.x
+
+spin_start=xfiles/spin_start.x
+spin_mid=xfiles/spin_mid.x
+spin_end=xfiles/spin_end.x
+
+celeb=xfiles/celeb2.x
+5
+uvMAP_BLUE_YELLOW.bmp
+uvMAP_YELLOW_BLACK.bmp
+uvMAP_CLOUD.bmp
+uvMAP_WHITE.bmp
+uvMAP_RED_ALPHA_TEST.bmp
+       
+// NOTE:
+//	THE FIRST ENTRY IS A BOGUS ONE USED TO REGISTER VERTEX WEIGHTS. YEAH ITS SLOPPILY DONE GO F URSELF.
+
+	
+<n characters> // playable characters
+	
+	<X MESH FILE W/ HEIRARCHY> ( NOT INCLUDED IN ANIMATION COUNT )
+	<BOGUS ANIMATION TO REGISTER VERTICES WITH BONES>
+	
+	<m animations>
+	<1st anim>
+	<2nd anim>
+	.
+	.
+	<mth anim>
+	
+	<X MESH FILE W/ HEIRARCHY> ( NOT INCLUDED IN ANIMATION COUNT )
+	<BOGUS ANIMATION TO REGISTER VERTICES WITH BONES>
+	
+	<m animations>
+	<1st anim>
+	<2nd anim>
+	.
+	.
+	<mth anim>
+	
+	<X MESH FILE W/ HEIRARCHY> ( NOT INCLUDED IN ANIMATION COUNT )
+	<BOGUS ANIMATION TO REGISTER VERTICES WITH BONES>
+	
+	<m animations>
+	<1st anim>
+	<2nd anim>
+	.
+	.
+	<mth anim>
+	
+<FOR n CHARACTERS>

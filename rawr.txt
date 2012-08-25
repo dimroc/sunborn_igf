@@ -1,0 +1,41 @@
+ITS FUN TO CHECK OUT THE HISTORY OF MY BS COMMENTS
+----------------------------------------------
+
+TODO:
+-------
+
+- Load models and animations with support for sound fx on anim.
+
+- Have the Value 0 (zero) in the heightmap mean no terrain / no triangles. 
+	How to do this though? With the Blocks and Tiles? Zeroing out a whole block is too much. 
+	Perhaps we can zero out a tile?
+
+
+- Finish Grass.
+
+- PP effects (bloom, not HDR)
+
+- Make Water surfaces that can ripple 
+
+
+----------------------------------
+THEN WORK ON ACTUAL GAME:
+
+- RakNet cient/server
+- TrueAxis SDK on server and client (prediction)
+- damn GAME MAYBE?!
+- MENU / GUI
+----------------------------------
+
+^^^^^^^^^^^^^    ^^^^^^^^^^^^^^^^^^^^^^^^   ^^^^^^^^^
+ To be done by October!! (screwed).
+------------------------------------------------------
+
+
+AFTER OCTOBER BETA GFX
+- Particle system & Renderer entirely on GPU. 
+	basically just send shader the sampler (texture with current state etc) 
+	and world transform matrix. (see Mark's blog)
+- Shadow Mapping from a single light source 
+	(sun, easy: move camera to light source, render to z buffer, 
+	do image space -> world space transformation, conditional in pixel shader).

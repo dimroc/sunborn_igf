@@ -1,0 +1,39 @@
+extension: .lml
+
+<# geometries>
+<Static (no heirarchy) X File Filename> // position of filename determines geomID (this being 0)
+.
+.
+.	// for n geometries.
+
+<# instances>
+<geomID> <scale.x> <scale.y> <scale.z> <angle.x> <angle.y> <angle.z> <pos.x> <pos.y> <pos.z>
+.
+.
+.
+till i-># instances.
+
+
+
+////////////// ACTUAL CODE SNIPPET ////////////////////
+// Get geometries to load
+    int n = 0;
+    string strModel;
+    fin >> n;
+    for(int i=0;i<n && fin.good();i++) {
+        fin >> strModel;
+        m_vGeometryFilenames.push_back(strModel);
+    }
+
+    // Setup instances to be created.
+    // geom index(int) - scale(d3dxvector3) - angle(d3dxvector3) - position(d3dxvector3)
+    fin >> n;
+    SStaticEntityInfo ei;
+    for(int i=0;i<n && fin.good(); i++)
+    {
+        fin >> ei.geomID
+            >> ei.scale.x >> ei.scale.y >> ei.scale.z
+            >> ei.angle.x >> ei.angle.y >> ei.angle.z            
+            >> ei.pos.x >> ei.pos.y >> ei.pos.z;
+        m_vStaticEntityInfo.push_back(ei);
+    }

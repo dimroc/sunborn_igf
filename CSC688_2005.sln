@@ -1,0 +1,40 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual C++ Express 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GPUTerrainProject", "GPUTerrainProject\GPUTerrainProject_2005.vcproj", "{9C04CC2D-C188-4443-A185-CB0BCA6ED98D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{ECD5924E-2C22-4144-A584-AB3AC7D32547} = {ECD5924E-2C22-4144-A584-AB3AC7D32547}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mp3player", "MP3Player\mp3player.vcproj", "{ECD5924E-2C22-4144-A584-AB3AC7D32547}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LightweightDatabaseServerFREEBSD", "LightweightDatabaseServerFreeBSD\LightweightDatabaseFREEBSD.vcproj", "{F555DF58-CFA5-416B-B13E-087E1502401B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LightweightDatabaseServerQuery", "LightweightDatabaseServerQuery\LightweightDatabaseServerQuery.vcproj", "{0B846585-FCE6-4842-B466-60AEEAF860B2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C04CC2D-C188-4443-A185-CB0BCA6ED98D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9C04CC2D-C188-4443-A185-CB0BCA6ED98D}.Debug|Win32.Build.0 = Debug|Win32
+		{9C04CC2D-C188-4443-A185-CB0BCA6ED98D}.Release|Win32.ActiveCfg = Release|Win32
+		{9C04CC2D-C188-4443-A185-CB0BCA6ED98D}.Release|Win32.Build.0 = Release|Win32
+		{ECD5924E-2C22-4144-A584-AB3AC7D32547}.Debug|Win32.ActiveCfg = Debug|Win32
+		{ECD5924E-2C22-4144-A584-AB3AC7D32547}.Debug|Win32.Build.0 = Debug|Win32
+		{ECD5924E-2C22-4144-A584-AB3AC7D32547}.Release|Win32.ActiveCfg = Release|Win32
+		{ECD5924E-2C22-4144-A584-AB3AC7D32547}.Release|Win32.Build.0 = Release|Win32
+		{F555DF58-CFA5-416B-B13E-087E1502401B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F555DF58-CFA5-416B-B13E-087E1502401B}.Debug|Win32.Build.0 = Debug|Win32
+		{F555DF58-CFA5-416B-B13E-087E1502401B}.Release|Win32.ActiveCfg = Release|Win32
+		{F555DF58-CFA5-416B-B13E-087E1502401B}.Release|Win32.Build.0 = Release|Win32
+		{0B846585-FCE6-4842-B466-60AEEAF860B2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0B846585-FCE6-4842-B466-60AEEAF860B2}.Debug|Win32.Build.0 = Debug|Win32
+		{0B846585-FCE6-4842-B466-60AEEAF860B2}.Release|Win32.ActiveCfg = Release|Win32
+		{0B846585-FCE6-4842-B466-60AEEAF860B2}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,27 @@
+extension: .cmp
+
+    static const UINT CT_NIMBOSTRATUS           =   1;  //dark low level clouds bringing rain
+    static const UINT CT_STRATOCUMULUS          =   2;  //low, lumpy layer of clouds that is sometimes accompanied by weak intensity precipitation
+    static const UINT CT_FAIRCUMULUS            =   3;  // Fair weather cumulus. floating cotton
+    static const UINT CT_CUMULUSNIMBUS          =   4;  //more vertically developed than fair weather cumulus. They can exist as individual towers
+    static const UINT CT_ALTOCUMULUS            =   5;  // field of parallel cotton balls    
+    static const UINT CT_CIRRUS                 =   6;  // super high level clouds, thin and wispy
+
+
+<# of Cloud Batches>
+<# of clouds in batch>
+<Cloudtype> <pos.x> <pos.y> <pos.z> <# of subclouds> <subcloud scale> <widthhalf> <heighthalf> <depthhalf>
+<Cloudtype> <pos.x> <pos.y> <pos.z> <# of subclouds> <subcloud scale> <widthhalf> <heighthalf> <depthhalf>
+.
+.
+for n clouds in batch
+<# of clouds in batch>
+<Cloudtype> <pos.x> <pos.y> <pos.z> <# of subclouds> <subcloud scale> <widthhalf> <heighthalf> <depthhalf>
+<Cloudtype> <pos.x> <pos.y> <pos.z> <# of subclouds> <subcloud scale> <widthhalf> <heighthalf> <depthhalf>
+.
+.
+for n clouds in batch
+.
+.
+for n batches
+
