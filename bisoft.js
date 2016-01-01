@@ -1,6 +1,5 @@
 var prefix = 'pages/';
 
-
 function loadintoIframe(iframeid, url)
 {
 	if (document.getElementById)
